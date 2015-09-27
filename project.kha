@@ -1,0 +1,31 @@
+{
+	"format": 3,
+	"game": {
+		"name": "LibdrpEmpty",
+		"width": 640,
+		"height": 480
+	},
+	"assets": [
+		{
+            "type": "image",
+            "file": "smile.png",
+            "name": "smile"
+        }
+	],
+	"rooms": [
+	
+	{
+            "name": "default",
+            "parent": null,
+            "neighbours": [],
+            "assets":
+            [
+                "smile"
+            ]
+        }
+	
+	],
+	
+	"sources":  [ "libdrp" ]
+	
+}
