@@ -27,12 +27,14 @@ class TestEntity extends Entity
 	{
 		this.x = x;
 		this.y = y;
-		image = Loader.the.getImage("smile");
-		rotSpeed = (Math.random() * 10) - 5;
-		
+		rotSpeed = (Math.random() * 10) - 5;	
 		gamepads = Gamepads.get();
-		
 		super();
+	}
+	
+	override public function load()
+	{
+		image = Loader.the.getImage("smile");		
 	}
 	
 	override public function act(delta:Float) 
