@@ -1,0 +1,6 @@
+[submodule "Kha"]
+	path = Kha
+	url = https://github.com/KTXSoftware/Kha
+[submodule "libdrp"]
+	path = libdrp
+	url = https://github.com/x17head/libdrp
