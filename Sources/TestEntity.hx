@@ -28,7 +28,6 @@ class TestEntity extends Entity
 		this.x = x;
 		this.y = y;
 		rotSpeed = (Math.random() * 10) - 5;	
-		gamepads = Gamepads.get();
 		super();
 	}
 	
@@ -39,11 +38,11 @@ class TestEntity extends Entity
 	
 	override public function act(delta:Float) 
 	{
-		if (gamepads.controllers[0].A > 0) rotation += rotSpeed * delta;
+		if (Gamepads.get().controllers[0].A > 0) rotation += rotSpeed * delta;
 	}
 	
 	override public function draw(graphics:Graphics)
 	{
-		drawImage(Loader.the.getImage("smile"), x, y, graphics);
+		drawImage(image, x, y, graphics);
 	}
 }
