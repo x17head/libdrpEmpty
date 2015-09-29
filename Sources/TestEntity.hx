@@ -12,9 +12,6 @@ import libdrp.input.Gamepads;
  */
 class TestEntity extends Entity
 {
-	
-	var x:Float = 0;
-	var y:Float = 0;
 	var speed:Float = 50;
 	var rotSpeed:Float = 0;
 	var xDir:Float = 0;
@@ -25,10 +22,10 @@ class TestEntity extends Entity
 
 	public function new(x:Float,y:Float) 
 	{
+		super();
 		this.x = x;
 		this.y = y;
 		rotSpeed = (Math.random() * 10) - 5;	
-		super();
 	}
 	
 	override public function load()
