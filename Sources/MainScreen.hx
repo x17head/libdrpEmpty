@@ -1,13 +1,13 @@
 package;
 
-import libdrp.Screen;
+import libdrp.Scene;
 import libdrp.View;
 import kha.Loader;
 /**
  * ...
  * @author Nate Edwards
  */
-class MainScreen extends Screen
+class MainScreen extends Scene
 {
 	var view:View;
 	
