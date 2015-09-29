@@ -7,7 +7,7 @@ import kha.graphics2.Graphics;
 import Std.random;
 import libdrp.Drp;
 
-import MainScreen;
+import MainScene;
 
 /**
  * ...
@@ -15,7 +15,7 @@ import MainScreen;
  */
 class LibdrpEmpty extends DrpGame
 {
-	var mainScreen:MainScreen;
+	var mainScreen:MainScene;
 
 	public function new() 
 	{
@@ -24,7 +24,7 @@ class LibdrpEmpty extends DrpGame
 	
 	override function setup() 
 	{
-		Drp.get().addScene("screen", new MainScreen());
+		Drp.get().addScene("screen", new MainScene());
 		Drp.get().setScene("screen");
 	}
 	

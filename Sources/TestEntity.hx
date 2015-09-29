@@ -5,7 +5,7 @@ import kha.graphics2.Graphics;
 import kha.Image;
 import kha.Loader;
 import Std.random;
-import libdrp.input.Gamepads;
+import libdrp.Drp;
 /**
  * ...
  * @author Nate Edwards
@@ -14,17 +14,16 @@ class TestEntity extends Entity
 {
 	var speed:Float = 50;
 	var rotSpeed:Float = 0;
-	var xDir:Float = 0;
-	var yDir:Float = 0;
 	var image:Image;
-	
-	var gamepads:Gamepads;
+	var drawMe:Bool = true;
 
 	public function new(x:Float,y:Float) 
 	{
 		super();
 		this.x = x;
 		this.y = y;
+		width = 16;
+		height = 16;
 		rotSpeed = (Math.random() * 10) - 5;	
 	}
 	
@@ -33,13 +32,14 @@ class TestEntity extends Entity
 		image = Loader.the.getImage("smile");		
 	}
 	
-	override public function act(delta:Float) 
+	override public function update(delta:Float) 
 	{
-		if (Gamepads.get().controllers[0].A > 0) rotation += rotSpeed * delta;
+		if (Drp.get().controllers[0].A > 0) rotation += rotSpeed * delta;
+		//rotation += rotSpeed * delta;		
 	}
 	
 	override public function draw(graphics:Graphics)
 	{
-		drawImage(image, x, y, graphics);
+		if(drawMe)drawImage(image, x, y, graphics);
 	}
 }
