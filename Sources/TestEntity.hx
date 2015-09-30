@@ -29,8 +29,9 @@ class TestEntity extends Entity
 	
 	override public function update(delta:Float) 
 	{
-		x = x + (Drp.get().controllers[0].LANALOGX * speed);
-		y = y + (Drp.get().controllers[0].LANALOGY * speed);
+		
+		if (Drp.get().mouseButton[0]) playSound("sound");
+		if (Drp.get().mouseButton[1]) playMusic("music");
 		
 		rotation += rotSpeed * delta;
 	}
