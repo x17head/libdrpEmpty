@@ -18,7 +18,7 @@
 		},
 		{
 			"type": "music",
-			"file": "music.wav",
+			"file": "sound.wav",
 			"name": "music"
 		}
 	],
