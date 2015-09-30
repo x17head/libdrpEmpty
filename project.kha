@@ -7,37 +7,34 @@
 	},
 	"assets": [
 		{
-            "type": "image",
-            "file": "smile.png",
-            "name": "smile"
-        },
+			"type": "image",
+			"file": "smile.png",
+			"name": "smile"
+		},
 		{
-            "type": "sound",
-            "file": "sound.wav",
-            "name": "sound"
-        },
+			"type": "sound",
+			"file": "sound.wav",
+			"name": "sound"
+		},
 		{
-            "type": "music",
-            "file": "music.wav",
-            "name": "music"
-        }
+			"type": "music",
+			"file": "music.wav",
+			"name": "music"
+		}
 	],
 	"rooms": [
-	
-	{
-            "name": "default",
-            "parent": null,
-            "neighbours": [],
-            "assets":
-            [
-                "smile",
+		{
+			"name": "default",
+			"parent": null,
+			"neighbours": [],
+			"assets": [
+				"smile",
 				"music",
 				"sound"
-            ]
-        }
-	
+			]
+		}
 	],
-	
-	"sources":  [ "libdrp" ]
-	
+	"sources": [
+		"libdrp"
+	]
 }
