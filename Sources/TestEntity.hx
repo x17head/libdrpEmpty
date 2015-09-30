@@ -13,7 +13,7 @@ import libdrp.Drp;
  */
 class TestEntity extends Entity
 {
-	var speed:Float = 50;
+	var speed:Float = 1;
 	var rotSpeed:Float = 0;
 	var drawMe:Bool = true;
 
@@ -29,9 +29,10 @@ class TestEntity extends Entity
 	
 	override public function update(delta:Float) 
 	{
-		if (Drp.get().controllers[0].B > 0) rotation += rotSpeed * delta;
-		if (Drp.get().controllers[0].Y > 0) x += 50 * delta;
-		if (Drp.get().mouseButton[0]) playMusic("music");
+		x = x + (Drp.get().controllers[0].LANALOGX * speed);
+		y = y + (Drp.get().controllers[0].LANALOGY * speed);
+		
+		rotation += rotSpeed * delta;
 	}
 	
 	override public function draw(graphics:Graphics)
