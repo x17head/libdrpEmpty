@@ -1,5 +1,6 @@
 package;
 
+import kha.audio1.SoundChannel;
 import libdrp.Entity;
 import kha.graphics2.Graphics;
 import kha.Image;
@@ -14,7 +15,6 @@ class TestEntity extends Entity
 {
 	var speed:Float = 50;
 	var rotSpeed:Float = 0;
-	var image:Image;
 	var drawMe:Bool = true;
 
 	public function new(x:Float,y:Float) 
@@ -27,19 +27,15 @@ class TestEntity extends Entity
 		rotSpeed = (Math.random() * 10) - 5;	
 	}
 	
-	override public function load()
-	{
-		image = Loader.the.getImage("smile");		
-	}
-	
 	override public function update(delta:Float) 
 	{
-		if (Drp.get().controllers[0].A > 0) rotation += rotSpeed * delta;
-		//rotation += rotSpeed * delta;		
+		if (Drp.get().controllers[0].B > 0) rotation += rotSpeed * delta;
+		if (Drp.get().controllers[0].Y > 0) x += 50 * delta;
+		if (Drp.get().mouseButton[0]) playMusic("music");
 	}
 	
 	override public function draw(graphics:Graphics)
 	{
-		if(drawMe)drawImage(image, x, y, graphics);
+		if(drawMe)drawImage("smile", x, y, graphics);
 	}
 }
