@@ -10,6 +10,16 @@
             "type": "image",
             "file": "smile.png",
             "name": "smile"
+        },
+		{
+            "type": "sound",
+            "file": "sound.wav",
+            "name": "sound"
+        },
+		{
+            "type": "music",
+            "file": "music.wav",
+            "name": "music"
         }
 	],
 	"rooms": [
@@ -20,7 +30,9 @@
             "neighbours": [],
             "assets":
             [
-                "smile"
+                "smile",
+				"music",
+				"sound"
             ]
         }
 	
